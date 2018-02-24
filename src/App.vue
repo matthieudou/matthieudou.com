@@ -1,5 +1,5 @@
 <template lang="pug">
-#app.min-h-screen.bg-grey.pt-8.pb-8
+#app.min-h-screen.bg-grey-lighter.pt-8.pb-8
   <router-view/>
 </template>
 
