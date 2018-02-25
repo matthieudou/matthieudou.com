@@ -88,7 +88,7 @@
   .shadow-md.m-1.p-4.mt-4
     .flex.items-center
       img.mr-4(src="../../assets/img/icons/plane.svg")
-      h3.text-blue Compétences
+      h3.text-blue Loisirs
     p.mt-4 Scoutisme, menuiserie, ski, bière, bonne nourriture, sports nautiques, open source, musique
   .shadow-md.m-1.p-4.bg-blue.flex.mt-4
     .flex.items-center(class="w-1/2")
