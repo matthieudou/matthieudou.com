@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  img(src="../../assets/img/utilities/Profil.jpg")
+  img(src="static/img/profil.jpg")
   .p-2
     h1.font-hairline.text-center.uppercase Matthieu d'Oultremont
     h2.font-hairline.text-center.uppercase Junior Fullstack developer

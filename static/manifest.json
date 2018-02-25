@@ -1,0 +1,10 @@
+{
+  "name": "Matthieudou",
+  "short_name": "Matthieudou",
+  "description": "Site web de Matthieu d'Oultremont",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3490dc",
+  "background_color": "#f1f5f8"
+}
