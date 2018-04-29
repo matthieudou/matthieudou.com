@@ -1,0 +1,13 @@
+/* eslint-disable */
+import './briefcase'
+import './calendar'
+import './code'
+import './github'
+import './language'
+import './linkedin'
+import './mail'
+import './map-marker'
+import './phone'
+import './plane'
+import './school'
+import './user'
