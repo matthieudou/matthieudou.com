@@ -40,7 +40,8 @@ module.exports = {
   ** Build configuration
   */
   plugins: [
-    {src: '~/plugins/svg-icon.js'}
+    {src: '~/plugins/svg-icon.js'},
+    {src: '~/plugins/ga.js', ssr: false}
   ],
   build: {
     /*
