@@ -1,3 +1,7 @@
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob-all')
+const path = require('path')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -44,6 +48,7 @@ module.exports = {
     {src: '~/plugins/ga.js', ssr: false}
   ],
   build: {
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */
@@ -55,6 +60,20 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+      if (!isDev) {
+        // Remove unused CSS using purgecss. See https://github.com/FullHuman/purgecss
+        // for more information about purgecss.
+        config.plugins.push(
+          new PurgecssPlugin({
+            paths: glob.sync([
+              path.join(__dirname, './pages/**/*.vue'),
+              path.join(__dirname, './layouts/**/*.vue'),
+              path.join(__dirname, './components/**/*.vue')
+            ]),
+            whitelist: ['html', 'body']
+          })
+        )
       }
     }
   }
