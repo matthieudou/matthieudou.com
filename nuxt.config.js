@@ -54,10 +54,15 @@ export default {
   ],
 
   build: {
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer')
+      ]
+    },
+
     extractCSS: true,
-    /*
-    ** Run ESLint on save
-    */
+
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -68,8 +73,6 @@ export default {
         })
       }
       if (!isDev) {
-        // Remove unused CSS using purgecss. See https://github.com/FullHuman/purgecss
-        // for more information about purgecss.
         config.plugins.push(
           new PurgecssPlugin({
             paths: glob.sync([
