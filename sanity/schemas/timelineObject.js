@@ -31,7 +31,7 @@ export default {
       subtitle: 'subtitle',
       dates: 'dates'
     },
-    prepare ({title, subtitle, dates}) {
+    prepare ({ title, subtitle, dates }) {
       return {
         title: title,
         subtitle: subtitle + ' ' + dates

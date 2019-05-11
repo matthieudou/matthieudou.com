@@ -2,7 +2,12 @@
   <div class="content">
     <div class="shadow hover:shadow-md m-1 p-4 mt-4">
       <div class="flex items-center">
-        <icon width="1rem" height="1rem" scale="2" name="briefcase" class="mr-2"></icon>
+        <icon
+          width="1rem"
+          height="1rem"
+          scale="2"
+          name="briefcase"
+          class="mr-2"/>
         <h3 class="text-blue">Expérience</h3>
       </div>
       <div class="mt-4">
@@ -33,7 +38,12 @@
     <div class="flex mt-4">
       <div class="shadow hover:shadow-md m-1 p-4 w-1/2">
         <div class="flex items-center">
-          <icon width="1rem" height="1rem" scale="2" name="language" class="mr-2"></icon>
+          <icon
+            width="1rem"
+            height="1rem"
+            scale="2"
+            name="language"
+            class="mr-2"/>
           <h3 class="text-blue">Langues</h3>
         </div>
         <div class="mt-4">
@@ -49,31 +59,41 @@
           <p class="text-grey-darker">Compétence professionnelle</p>
         </div>
       </div>
-    <div class="shadow hover:shadow-md m-1 p-4 w-1/2">
-      <div class="flex items-center">
-        <icon width="1rem" height="1rem" scale="2" name="code" class="mr-2"></icon>
-        <h3 class="text-blue">Compétences</h3>
+      <div class="shadow hover:shadow-md m-1 p-4 w-1/2">
+        <div class="flex items-center">
+          <icon
+            width="1rem"
+            height="1rem"
+            scale="2"
+            name="code"
+            class="mr-2"/>
+          <h3 class="text-blue">Compétences</h3>
+        </div>
+        <div class="mt-4">
+          <ul>
+            <li>HTML 5 & CSS 3</li>
+            <li>Javascript (ES6)</li>
+            <li>Ruby</li>
+            <li>Rspec</li>
+            <li>Frameworks
+              <ul>
+                <li>Rails</li>
+                <li>Vue.js</li>
+                <li>Nuxt.js</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="mt-4">
-        <ul>
-          <li>HTML 5 & CSS 3</li>
-          <li>Javascript (ES6)</li>
-          <li>Ruby</li>
-          <li>Rspec</li>
-          <li>Frameworks
-            <ul>
-              <li>Rails</li>
-              <li>Vue.js</li>
-              <li>Nuxt.js</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
     </div>
     <div class="shadow hover:shadow-md p-4 m-1">
       <div class="flex items-center">
-        <icon width="1rem" height="1rem" scale="2" name="school" class="mr-2"></icon>
+        <icon
+          width="1rem"
+          height="1rem"
+          scale="2"
+          name="school"
+          class="mr-2"/>
         <h3 class="text-blue">Formations</h3>
       </div>
       <div class="mt-4">
@@ -99,7 +119,12 @@
     </div>
     <div class="shadow hover:shadow-md m-1 p-4 mt-4">
       <div class="flex items-center">
-        <icon width="1rem" height="1rem" scale="2" name="plane" class="mr-2"></icon>
+        <icon
+          width="1rem"
+          height="1rem"
+          scale="2"
+          name="plane"
+          class="mr-2"/>
         <h3 class="text-blue">Loisirs</h3>
       </div>
       <p class="mt-4">Scoutisme, menuiserie, ski, bière, bonne nourriture, sports nautiques, open source, musique</p>
@@ -107,14 +132,28 @@
     <div class="shadow hover:shadow-md m-1 p-4 bg-blue flex mt-4 text-white">
       <div class="flex items-center w-1/2">
         <h4>
-          <icon width="1rem" height="1rem" scale="2" name="github" class="mr-2"></icon>
-          <a class="text-white" href="https://github.com/matthieudou">matthieudou</a>
+          <icon
+            width="1rem"
+            height="1rem"
+            scale="2"
+            name="github"
+            class="mr-2"/>
+          <a
+            class="text-white"
+            href="https://github.com/matthieudou">matthieudou</a>
         </h4>
       </div>
       <div class="flex items-center w-1/2">
         <h4>
-          <icon width="1rem" height="1rem" scale="2" name="linkedin" class="mr-2"></icon>
-          <a class="text-white" href="https://www.linkedin.com/in/matthieudou/">Matthieu d'Oultremont</a>
+          <icon
+            width="1rem"
+            height="1rem"
+            scale="2"
+            name="linkedin"
+            class="mr-2"/>
+          <a
+            class="text-white"
+            href="https://www.linkedin.com/in/matthieudou/">Matthieu d'Oultremont</a>
         </h4>
       </div>
     </div>
@@ -122,15 +161,15 @@
 </template>
 
 <script>
-import '@/icons/school'
-import '@/icons/language'
-import '@/icons/code'
-import '@/icons/briefcase'
-import '@/icons/plane'
-import '@/icons/github'
-import '@/icons/linkedin'
+  import '@/icons/school'
+  import '@/icons/language'
+  import '@/icons/code'
+  import '@/icons/briefcase'
+  import '@/icons/plane'
+  import '@/icons/github'
+  import '@/icons/linkedin'
 
-export default {
+  export default {
 
-}
+  }
 </script>

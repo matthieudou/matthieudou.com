@@ -14,13 +14,20 @@
     "svg": "vsvg -s assets/images/icons/svg -t icons --es6"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.2.0",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-html": "^4.0.6",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "glob-all": "^3.1.0",
     "node-sass": "^4.9.0",

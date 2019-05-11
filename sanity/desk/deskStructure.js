@@ -1,15 +1,15 @@
-import S from "@sanity/desk-tool/structure-builder";
+import S from '@sanity/desk-tool/structure-builder'
 
 export default () =>
   S.list()
-    .title("Content")
+    .title('Content')
     .items([
       S.listItem()
-        .title("Config")
+        .title('Config')
         .child(
           S.editor()
             .id('config')
-            .schemaType("config")
-            .documentId("global-config")
+            .schemaType('config')
+            .documentId('global-config')
         )
-    ]);
+    ])
