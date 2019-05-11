@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.2.0",
-    "nuxt": "^1.0.0"
+    "dotenv": "^8.0.0",
+    "nuxt": "^2.6.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -31,7 +32,6 @@
     "eslint-plugin-vue": "^4.0.0",
     "glob-all": "^3.1.0",
     "node-sass": "^4.9.0",
-    "pug": "^2.0.3",
     "purgecss-webpack-plugin": "^0.22.0",
     "sass-loader": "^7.0.1",
     "tailwindcss": "^1.0.0-beta.8",

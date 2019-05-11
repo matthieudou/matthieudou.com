@@ -1,11 +1,13 @@
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob-all')
 const path = require('path')
+require('dotenv').config()
 
-module.exports = {
-  /*
-  ** Headers of the page
-  */
+export default {
+  env: {
+    sanityProjectId: process.env.SANITY_PROJECT_ID
+  },
+
   head: {
     title: 'CV - Matthieu d’Oultremont',
     meta: [
@@ -33,16 +35,13 @@ module.exports = {
       { rel: 'icon', type: 'image/png', href: '/icon.png' }
     ]
   },
+
   css: [
     '~/assets/styles/main.scss'
   ],
-  /*
-  ** Customize the progress bar color
-  */
+
   loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
+
   plugins: [
     { src: '~/plugins/svg-icon.js' }
   ],
@@ -53,6 +52,7 @@ module.exports = {
       dev: false
     }]
   ],
+
   build: {
     extractCSS: true,
     /*
