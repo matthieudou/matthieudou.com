@@ -15,7 +15,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "svg": "vsvg -s assets/images/icons/svg -t icons --es6"
+    "svg": "vsvg -s assets/images/icons/svg -t icons --es6",
+    "production:build": "yarn generate && yarn functions:build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.5.0",
