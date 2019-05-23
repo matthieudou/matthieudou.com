@@ -1,20 +1,20 @@
 <template>
-  <main class="p-8">
+  <main class="container mx-auto p-8">
     <div class="flex">
       <img
-        class="w-32 h-32 object-cover rounded-lg shadow-lg"
+        class="w-32 h-32 md:w-64 md:h-64 object-cover rounded-lg shadow-lg"
         src="~/assets/images/profil.jpg"
       >
-      <div class="ml-4">
-        <h1 class="text-3xl">Matthieu d'Oultremont</h1>
+      <div class="ml-4 md:ml-8">
+        <h1 class="text-3xl font-heading leading-tight">Matthieu <br> d'Oultremont</h1>
 
         <div class="text-gray-700 mt-2">Fullstack developer</div>
 
+        <div class="text-gray-500 mt-2">
+          <icon name="map-marker"/>
+          <span>Brussels, Belgium</span>
+        </div>
       </div>
-    </div>
-    <div class="text-gray-500 mt-2 text-right">
-      <icon name="map-marker"/>
-      <span>Brussels, Belgium</span>
     </div>
     <p class="mt-4">
       Hi  👋,<br>
