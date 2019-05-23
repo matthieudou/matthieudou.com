@@ -10,12 +10,12 @@
     "sanity:dev": "cd sanity && sanity start",
     "functions:dev": "netlify-lambda serve functions",
     "functions:build": "netlify-lambda build functions",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "nuxt:build": "nuxt build",
+    "nuxt:start": "nuxt start",
+    "nuxt:generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "svg": "vsvg -s assets/images/icons/svg -t icons --es6",
+    "svg:build": "vsvg -s assets/images/icons/svg -t icons --es6",
     "production:build": "yarn generate && yarn functions:build"
   },
   "dependencies": {
