@@ -1,7 +1,7 @@
 export default {
-  name: 'section',
-  title: 'Section',
-  type: 'document',
+  name: 'experienceResume',
+  title: 'Experience',
+  type: 'object',
   fields: [
     {
       name: 'title',
@@ -10,11 +10,10 @@ export default {
     },
     {
       name: 'items',
-      title: 'Items',
+      title: 'Experience items',
       type: 'array',
       of: [
-        { type: 'timelineObject' },
-        { type: 'iconObject' }
+        { type: 'timelineObject' }
       ]
     }
   ]

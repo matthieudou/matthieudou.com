@@ -1,15 +1,12 @@
 import S from '@sanity/desk-tool/structure-builder'
 
+import config from './config'
+import resume from './resume'
+
 export default () =>
   S.list()
     .title('Content')
     .items([
-      S.listItem()
-        .title('Config')
-        .child(
-          S.editor()
-            .id('config')
-            .schemaType('config')
-            .documentId('global-config')
-        )
+      config,
+      resume
     ])

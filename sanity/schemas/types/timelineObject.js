@@ -22,6 +22,14 @@ export default {
       name: 'dates',
       title: 'Dates',
       type: 'string'
+    },
+    {
+      name: 'thumbnail',
+      title: 'Thumbnail',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     }
   ],
 
@@ -29,12 +37,14 @@ export default {
     select: {
       title: 'title',
       subtitle: 'subtitle',
-      dates: 'dates'
+      dates: 'dates',
+      thumbnail: 'thumbnail'
     },
-    prepare ({ title, subtitle, dates }) {
+    prepare ({ title, subtitle, dates, thumbnail }) {
       return {
         title: title,
-        subtitle: subtitle + ' ' + dates
+        subtitle: subtitle + ' ' + dates,
+        media: thumbnail
       }
     }
   }

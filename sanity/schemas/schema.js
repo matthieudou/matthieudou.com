@@ -4,10 +4,20 @@ import createSchema from 'part:@sanity/base/schema-creator'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
-import section from './section'
-import config from './config'
-import iconObject from './iconObject'
-import timelineObject from './timelineObject'
+// OBJECTS
+import config from './objects/config'
+import educationResume from './objects/educationResume'
+import experienceResume from './objects/experienceResume'
+import skillsResume from './objects/skillsResume'
+// ...
+
+// TYPES
+import iconObject from './types/iconObject'
+import timelineObject from './types/timelineObject'
+// ...
+
+// DOCUMENTS
+// ...
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,10 +25,16 @@ export default createSchema({
   // Then proceed to concatenate our our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    /* Your types here! */
+    // OBJECTS
     config,
-    section,
+    educationResume,
+    experienceResume,
+    skillsResume,
+
+    // TYPES
     iconObject,
     timelineObject
+
+    // DOCUMENTS
   ])
 })

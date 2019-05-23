@@ -1,11 +1,21 @@
 {
   "root": true,
   "project": {
-    "name": "matthieudou.network"
+    "name": "matthieudou.com"
   },
   "api": {
     "projectId": "2ljanzg9",
     "dataset": "production"
+  },
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      },
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
   },
   "plugins": [
     "@sanity/base",

@@ -46,7 +46,8 @@ export default {
   loading: { color: '#3B8070' },
 
   plugins: [
-    { src: '~/plugins/svg-icon.js' }
+    { src: '~/plugins/svg-icon' },
+    { src: '~/plugins/sanity' }
   ],
 
   modules: [
@@ -112,6 +113,9 @@ export default {
             whitelist: ['html', 'body']
           })
         )
+      }
+      config.node = {
+        fs: 'empty'
       }
     }
   }

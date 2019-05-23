@@ -1,7 +1,7 @@
 export default {
-  name: 'config',
-  title: 'Config',
-  type: 'document',
+  name: 'educationResume',
+  title: 'Education',
+  type: 'object',
   fields: [
     {
       name: 'title',
@@ -9,11 +9,11 @@ export default {
       type: 'string'
     },
     {
-      name: 'sections',
-      title: 'Sections',
+      name: 'items',
+      title: 'Education items',
       type: 'array',
       of: [
-        { type: 'section' }
+        { type: 'timelineObject' }
       ]
     }
   ]
