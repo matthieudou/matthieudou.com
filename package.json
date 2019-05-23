@@ -5,7 +5,7 @@
   "author": "matthieudou <matthieu.doultremont@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "ttab yarn nuxt:dev && ttab yarn sanity:dev && ttab yarn functions:dev",
+    "dev": "yarn dev",
     "nuxt:dev": "nuxt",
     "sanity:dev": "cd sanity && sanity start",
     "functions:dev": "netlify-lambda serve functions",
@@ -45,7 +45,6 @@
     "glob-all": "^3.1.0",
     "purgecss-webpack-plugin": "^0.22.0",
     "tailwindcss": "^1.0.0-beta.8",
-    "ttab": "^0.6.1",
     "vue-svgicon": "^2.1.3"
   }
 }
