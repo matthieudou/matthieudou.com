@@ -5,7 +5,7 @@
   "author": "matthieudou <matthieu.doultremont@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "yarn dev",
+    "dev": "yarn nuxt:dev",
     "nuxt:dev": "nuxt",
     "sanity:dev": "cd sanity && sanity start",
     "functions:dev": "netlify-lambda serve functions",
