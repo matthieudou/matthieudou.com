@@ -5,7 +5,10 @@ require('dotenv').config()
 
 export default {
   env: {
-    sanityProjectId: process.env.SANITY_PROJECT_ID
+    SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
+    BASE_URL: process.env.BASE_URL,
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
+    FUNCTIONS_BASE_URL: process.env.FUNCTIONS_BASE_URL
   },
 
   head: {
@@ -16,20 +19,20 @@ export default {
       { name: 'theme-color', content: '#4E8FD6' },
       { hid: 'description', name: 'description', content: 'Site de Matthieu d’Oultremont: CV' },
       // OG TAGS
-      { hid: 'og:url', poperty: 'og:url', content: 'https://matthieudou.network' },
+      { hid: 'og:url', poperty: 'og:url', content: process.env.BASE_URL },
       { hid: 'og:type', poperty: 'og:type', content: 'website' },
       { hid: 'og:title', poperty: 'og:title', content: 'Site de Matthieu d’Oultremont: CV' },
       { hid: 'og:description', poperty: 'og:description', content: 'Site de Matthieu d’Oultremont: CV' },
-      { hid: 'og:image', poperty: 'og:image', content: 'https://matthieudou.network/profil.jpg' },
+      { hid: 'og:image', poperty: 'og:image', content: process.env.BASE_URL + '/profil.jpg' },
       // TWITTER TAGS
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'Site de Matthieu d’Oultremont: CV' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'Site de Matthieu d’Oultremont: CV' },
-      { hid: 'twitter:image', name: 'twitter:image', content: 'https://matthieudou.network/profil.jpg' },
+      { hid: 'twitter:image', name: 'twitter:image', content: process.env.BASE_URL + '/profil.jpg' },
       // GOOGLE TAGS
       { hid: 'google:name', itemprop: 'name', content: 'Site de Matthieu d’Oultremont: CV' },
       { hid: 'google:description', itemprop: 'description', content: 'Site de Matthieu d’Oultremont: CV' },
-      { hid: 'google:image', itemprop: 'image', content: 'https://matthieudou.network/profil.jpg' }
+      { hid: 'google:image', itemprop: 'image', content: process.env.BASE_URL + '/profil.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/icon.png' }
@@ -37,7 +40,7 @@ export default {
   },
 
   css: [
-    '~/assets/styles/main.scss'
+    '~/assets/styles/main.css'
   ],
 
   loading: { color: '#3B8070' },
@@ -47,11 +50,27 @@ export default {
   ],
 
   modules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-118381212-1',
-      dev: false
-    }]
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: process.env.GOOGLE_ANALYTICS_ID,
+        dev: false
+      }
+    ],
+    [
+      '@nuxtjs/axios',
+      {
+        proxy: true
+      }
+    ]
   ],
+
+  proxy: {
+    '/.netlify': {
+      target: 'http://localhost:9000',
+      pathRewrite: { '^/.netlify/functions': '' }
+    }
+  },
 
   build: {
     postcss: {
