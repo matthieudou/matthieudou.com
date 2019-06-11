@@ -41,7 +41,7 @@
   },
   "bundlesize": [
     {
-      "paths": "dist/**/*"
+      "path": "dist/**/*.js"
     }
   ]
 }
