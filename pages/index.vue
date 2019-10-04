@@ -1,22 +1,41 @@
 <template>
-  <section class="container flex bg-white mx-auto shadow-lg">
-    <div class="min-h-full text-white bg-blue w-1/3">
-      <sidebar/>
+  <div class="container">
+    <div>
+      <h1 class="title">
+        www
+      </h1>
+      <h2 class="subtitle">
+        Website of Matthieu d&#39;Oultremont
+      </h2>
+      <div class="links">
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+          class="button--green"
+        >
+          Documentation
+        </a>
+        <a
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          class="button--grey"
+        >
+          GitHub
+        </a>
+      </div>
     </div>
-    <div class="min-h-full p-8 w-2/3">
-      <main-content/>
-    </div>
-  </section>
+  </div>
 </template>
 
 <script>
-  import Sidebar from '@/components/resume/Sidebar'
-  import MainContent from '@/components/resume/MainContent'
-
   export default {
-    components: {
-      Sidebar,
-      MainContent
+    head () {
+      return {
+        script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+      }
     }
   }
 </script>
+
+<style>
+</style>

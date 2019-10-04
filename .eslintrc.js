@@ -1,28 +1,16 @@
 module.exports = {
   root: true,
-
-  // parser: 'babel-eslint',
-  parserOptions: {
-    "parser": "babel-eslint"
-  },
-
   env: {
     browser: true,
-    es6: true,
     node: true
   },
-
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
   extends: [
-    'standard',
-    'plugin:vue/strongly-recommended'
+    '@nuxtjs',
+    'plugin:nuxt/recommended'
   ],
-
-  // required to lint *.vue files
-  plugins: [
-    'standard',
-    'vue'
-  ],
-
   // add your custom rules here
   rules: {
     'camelcase': [0, {properties: 'never'}],
@@ -54,11 +42,6 @@ module.exports = {
     }],
     "handle-callback-err": "off",
   },
-
-  globals: {
-    // '$nuxt': false
-  },
-
   overrides: [
     {
       "files": ["*.vue"],
