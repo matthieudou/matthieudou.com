@@ -1,6 +1,6 @@
 # www
 
-> My stupendous Nuxt.js project
+> Website of Matthieu d'Oultremont
 
 ## Build Setup
 
