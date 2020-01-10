@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "project": {
+    "name": "matthieudou.com"
+  },
+  "api": {
+    "projectId": "2ljanzg9",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "google-analytics",
+    "@sanity/dashboard"
+  ],
+  "env": {
+    "development": {
+      "dataset": "development",
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    }
+  ]
+}
