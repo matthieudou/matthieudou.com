@@ -17,26 +17,22 @@ export default () =>
                 )
             ])
         ),
-
-      S.listItem()
-        .title('Drafts')
-        .schemaType('page')
-        .child(
-          S.documentList()
-            .title('Drafts pages')
-            .schemaType('page')
-            .filter('published == false')
-        ),
-
       S.listItem()
         .title('Pages')
-      // .child()
-      // S.listItem()
-      //   .title('Pages')
-      //   .schemaType('page')
-      //   .child(
-      //     S.documentList()
-      //     .title('Categories')
-      //       .filter('published == false')
-      //   ),
+        .child(
+          S.list()
+            .title('Pages')
+            .items([
+              S.listItem()
+                .title('Draft pages')
+                .child(
+                  S.documentTypeList('page')
+                    .title('Drafts pages')
+                    .schemaType('page')
+                    .filter('published == false')
+                ),
+              S.documentTypeListItem('page')
+                .title('All pages')
+            ])
+        )
     ])
