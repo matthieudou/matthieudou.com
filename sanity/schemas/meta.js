@@ -5,6 +5,11 @@ export default {
   options: { collapsible: true, collapsed: true },
   fields: [
     {
+      name: 'title',
+      title: 'Title',
+      type: 'string'
+    },
+    {
       name: 'description',
       title: 'Meta description',
       type: 'text'

@@ -41,6 +41,10 @@ module.exports = {
       ]
     }],
     "handle-callback-err": "off",
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "never"
+    }]
   },
   overrides: [
     {

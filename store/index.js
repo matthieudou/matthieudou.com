@@ -43,7 +43,7 @@ export const mutations = {
 export const actions = {
   async fetchLayout ({ commit, state }, id) {
     if (!state.layouts[id]) {
-      const layout = await client.fetch(layoutQuery(id))
+      const layout = await client.fetch(layoutQuery, { id })
       commit('addLayout', layout)
     }
     commit('setCurrentLayout', id)
@@ -52,7 +52,7 @@ export const actions = {
   async fetchPage ({ state, commit, dispatch }, route) {
     if (!state.pages[route]) {
       try {
-        const page = await client.fetch(pageQuery(route))
+        const page = await client.fetch(pageQuery, { route })
         if (!page) { return false }
         commit('addPage', page)
       } catch {
@@ -66,13 +66,14 @@ export const actions = {
   }
 }
 
-const layoutQuery = id => /* groq */ `
-  *[_type == 'layout' && id == "${id}"][0]
+const layoutQuery = /* groq */ `
+  *[_type == 'layout' && id == $id][0]
 `
 
-const pageQuery = route => /* groq */`
-  *[_type == 'page' && route == "${route}"] {
+const pageQuery = /* groq */`
+  *[_type == 'page' && route.current == $route] {
     ...,
+    'route': route.current,
     'pageOptions': {
       ...pageOptions,
       'layout': pageOptions.layout->ids

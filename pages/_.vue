@@ -1,20 +1,19 @@
 <template>
   <main>
-    <pre>
-      {{ page }}
-    </pre>
+    <portable-text :blocks="page.pageContent" />
   </main>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
+  import PortableText from '~/components/utilities/PortableText'
 
   export default {
     layout ({ store }) { return store.state.currentLayout.id || 'default' },
 
     head () {
       return {
-        title: this.page.title || this.page.route
+        title: this.page.meta.title
       }
     },
 
@@ -32,6 +31,10 @@
       ...mapGetters({
         page: 'getCurrentPage'
       })
+    },
+
+    components: {
+      PortableText
     }
   }
 </script>

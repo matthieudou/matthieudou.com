@@ -10,4 +10,4 @@ export const client = sanityClient({
   useCdn: process.env.NODE_ENV === 'production'
 })
 
-export const imageUrl = source => imageUrlBuilder(client)(source).auto('format')
+export const imageUrl = source => imageUrlBuilder(client).image(source).auto('format')

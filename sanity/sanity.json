@@ -14,7 +14,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "google-analytics",
-    "@sanity/dashboard"
+    "@sanity/dashboard",
+    "@sanity/code-input"
   ],
   "env": {
     "development": {
